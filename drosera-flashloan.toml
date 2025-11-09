@@ -1,0 +1,62 @@
+# Drosera Flash Loan Detector Trap Configuration
+# Deploy with: DROSERA_PRIVATE_KEY=0x... drosera apply -f drosera-flashloan.toml
+
+# Network settings for Ethereum mainnet
+ethereum_rpc = "https://cloudflare-eth.com"
+drosera_rpc = "https://relay.mainnet.drosera.io"  # Update with actual mainnet relay when available
+eth_chain_id = 1  # Ethereum mainnet
+
+# Drosera protocol contract address on mainnet
+# Update this with actual mainnet address when Drosera launches on mainnet
+drosera_address = "0x0000000000000000000000000000000000000000"  # Placeholder
+
+# Response contract settings
+# This is what gets called when the trap detects an issue
+# For flash loan attacks, we don't trigger on-chain responses (to save gas)
+# All alerting happens off-chain via your operator node + Telegram
+response_contract = "0x0000000000000000000000000000000000000000"  # No on-chain response
+response_function = ""  # No on-chain response
+
+# Trap configuration
+# The address field will be automatically added by drosera CLI after deployment
+# address = "0x..."  # Auto-populated after running 'drosera apply'
+
+# Privacy settings
+# Set to false to allow any Drosera operator to run this trap
+# Set to true if you only want specific operators (like yourself)
+private_trap = false
+
+# Operator whitelist (only used if private_trap = true)
+# Add your operator address here if you want exclusive monitoring
+# whitelist = ["0xYourOperatorAddress"]
+
+# Block sampling
+# Provide last 10 blocks of data to shouldAlert for rapid increase detection
+# This allows detecting >30% debt spikes characteristic of flash loan attacks
+block_sample_size = 10
+
+# Cooldown period (in blocks)
+# Minimum time between alert triggers (100 blocks = ~20 minutes)
+# Prevents alert spam while attack is ongoing
+cooldown_period_blocks = 100
+
+# Operator limits
+# Minimum 1 operator (yourself) required
+min_number_of_operators = 1
+# Maximum 10 operators can monitor this trap
+max_number_of_operators = 10
+
+# Monitored Tokens (hardcoded in contract):
+# - WETH: 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+# - WBTC: 0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599
+# - USDC: 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+# - USDT: 0xdAC17F958D2ee523a2206206994597C13D831ec7
+# - DAI: 0x6B175474E89094C44Da98b954EedeAC495271d0F
+
+# Detection Thresholds (hardcoded in contract):
+# - WETH: $50M worth (~25K ETH)
+# - WBTC: $30M worth (~500 BTC)
+# - USDC: $100M
+# - USDT: $100M
+# - DAI: $50M
+# - Rapid increase: >30% debt increase in 1 block

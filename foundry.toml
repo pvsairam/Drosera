@@ -1,0 +1,23 @@
+# Foundry configuration for Drosera trap development
+[profile.default]
+src = "contracts"
+out = "out"
+libs = ["lib"]
+solc_version = "0.8.24"
+
+# Optimizer settings
+optimizer = true
+optimizer_runs = 200
+
+# Test settings
+verbosity = 3
+
+# RPC endpoints (can be overridden with --rpc-url flag)
+[rpc_endpoints]
+mainnet = "https://cloudflare-eth.com"
+sepolia = "https://rpc.sepolia.org"
+
+# Etherscan API keys for verification
+[etherscan]
+mainnet = { key = "${ETHERSCAN_API_KEY}" }
+sepolia = { key = "${ETHERSCAN_API_KEY}" }

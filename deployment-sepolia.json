@@ -1,0 +1,26 @@
+{
+  "network": "sepolia",
+  "contractAddress": "0x3FEfF8a0a8C13274e57b08B9d49b4e0bf243d8e3",
+  "pool": "0x6Ae43d3271ff6888e7Fc43Fd7321a503ff738951",
+  "assets": [
+    {
+      "token": "0xC558DBdd856501FCd9aaF1E62eae57A9F0629a3c",
+      "threshold": "1000000000000000000",
+      "symbol": "WETH"
+    },
+    {
+      "token": "0x94a9D9AC8a22534E3FaCa9F4e7F2E2cf85d5E4C8",
+      "threshold": "1000000000",
+      "symbol": "USDC"
+    },
+    {
+      "token": "0xFF34B3d4Aee8ddCd6F9AFFFB6Fe49bD371b8a357",
+      "threshold": "1000000000000000000000",
+      "symbol": "DAI"
+    }
+  ],
+  "deployer": "0xF9810b951d45D19754435D8e44b7761aA1635D72",
+  "transactionHash": "0x3be5e7aca0ae10419b635089ec1d7c442f2d76bd3604705183a695c81ad8a64c",
+  "deployedAt": "2025-11-09T09:50:00.000Z",
+  "status": "✅ Successfully deployed with corrected uint8 event signature"
+}

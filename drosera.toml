@@ -1,0 +1,41 @@
+# Drosera Oracle Trap Configuration
+# Deploy with: DROSERA_PRIVATE_KEY=0x... drosera apply
+
+# Network settings for Ethereum mainnet
+ethereum_rpc = "https://cloudflare-eth.com"
+drosera_rpc = "https://relay.mainnet.drosera.io"  # Update with actual mainnet relay when available
+eth_chain_id = 1  # Ethereum mainnet
+
+# Drosera protocol contract address on mainnet
+# Update this with actual mainnet address when Drosera launches on mainnet
+drosera_address = "0x0000000000000000000000000000000000000000"  # Placeholder
+
+# Response contract settings
+# This is what gets called when the trap detects an issue
+# For now, we don't trigger on-chain responses (to save gas)
+# All monitoring happens off-chain via operators
+response_contract = "0x0000000000000000000000000000000000000000"  # Optional
+response_function = ""  # Optional
+
+# Trap configuration
+# The address field will be automatically added by drosera CLI after deployment
+# address = "0x..."  # Auto-populated after running 'drosera apply'
+
+# Privacy settings
+# Set to true if you only want specific operators to run this trap
+private_trap = false
+
+# Operator whitelist (only used if private_trap = true)
+# whitelist = ["0xOperator1Address", "0xOperator2Address"]
+
+# Block sampling
+# How many historical blocks of data to provide to shouldAlert
+block_sample_size = 10
+
+# Cooldown period (in blocks)
+# Minimum time between response triggers
+cooldown_period_blocks = 100
+
+# Operator limits
+min_number_of_operators = 1
+max_number_of_operators = 10

@@ -1,0 +1,53 @@
+node_modules
+dist
+.DS_Store
+server/public
+vite.config.ts.*
+*.tar.gz
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Development environment
+.replit
+.repl
+replit.nix
+.config/
+.local/
+replit.md
+
+# Attached assets (development only)
+attached_assets/
+
+# Build artifacts
+.cache/
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Database
+*.db
+*.sqlite
+
+# Temporary files
+/tmp/
+*.tmp
+
+# Compilation artifacts
+contracts/*.json
+artifacts/
+cache/
+out/
+typechain/
+broadcast/
+contracts/*.md
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo

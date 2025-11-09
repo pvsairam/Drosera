@@ -1,0 +1,63 @@
+{
+  "network": "mainnet",
+  "contractAddress": "0xB853756Aa0c9450E19Af167749710450525992C8",
+  "pool": "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2",
+  "assets": [
+    {
+      "token": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "threshold": "25000000000000000000000",
+      "symbol": "WETH"
+    },
+    {
+      "token": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "threshold": "50000000000000",
+      "symbol": "USDC"
+    },
+    {
+      "token": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      "threshold": "50000000000000",
+      "symbol": "USDT"
+    },
+    {
+      "token": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+      "threshold": "50000000000000000000000000",
+      "symbol": "DAI"
+    },
+    {
+      "token": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+      "threshold": "83300000000",
+      "symbol": "WBTC"
+    },
+    {
+      "token": "0x514910771AF9Ca656af840dff83E8264EcF986CA",
+      "threshold": "2000000000000000000000000",
+      "symbol": "LINK"
+    },
+    {
+      "token": "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
+      "threshold": "333333000000000000000000",
+      "symbol": "AAVE"
+    },
+    {
+      "token": "0xD533a949740bb3306d119CC777fa900bA034cd52",
+      "threshold": "50000000000000000000000000",
+      "symbol": "CRV"
+    },
+    {
+      "token": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      "threshold": "5000000000000000000000000",
+      "symbol": "UNI"
+    },
+    {
+      "token": "0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2",
+      "threshold": "20000000000000000000000",
+      "symbol": "MKR"
+    }
+  ],
+  "deployer": "0xF9810b951d45D19754435D8e44b7761aA1635D72",
+  "transactionHash": "0x7730df87d068eb7d4a0b67f29fc505081edb5d0ab921d75c14b4c49e0c67c1ad",
+  "deployedAt": "2025-11-09T09:56:04.898Z",
+  "status": "Production deployment with corrected uint8 event signature",
+  "eventSignature": "FlashLoan(address,address,address,uint256,uint8,uint256,uint16)",
+  "coveragePercent": 95
+}
